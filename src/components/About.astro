@@ -1,0 +1,43 @@
+---
+import {Icon} from 'astro-icon'
+
+const id = [
+  {
+    icon: "mdi:github",
+    link: "https://github.com/hvlxh",
+  },
+  {
+    icon: "bi:discord",
+    link: "https://discord.com/users/749560311312285696"
+  },
+  {
+    icon: "mdi:instagram",
+    link: "https://instagram.com/hvlxh_",
+  }
+]
+---
+
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-white rounded-lg border-2 border-gray-500 max-sm:mx-5">
+    <div class="grid grid-cols-2 max-w-md px-3 pt-3">
+      <div>
+        <h1 class="text-2xl">hvlxh</h1>
+        <p class="text-gray-500/80 w-56">Full Stack, Software Developer</p>
+      </div>
+      <div>
+        <p>Hey, I am a full-stack developer from India! I am interested in making discord bots, Also like to do in minecraft stuff</p>
+      </div>   
+    </div>
+    <div class="flex justify-between mt-4">
+      {id.map((i) => (
+        <button class="w-full p-1 border-t-2 border-r-2 border-gray-500 hover:text-black hover:bg-stone-300 text-gray-900 duration-300 justify-center items-center">
+          <a href={i.link} target="_blank">
+            <span class="inline-block align-middle">
+              <Icon name={i.icon} size={25} />
+            </span>
+          </a>
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
