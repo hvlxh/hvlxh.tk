@@ -1,46 +1,60 @@
 ---
-import {Icon} from 'astro-icon'
+// @ts-ignore
+import { Icon } from "astro-icon"
 
-const id = [
+const contact = [
   {
     icon: "mdi:github",
     link: "https://github.com/hvlxh",
-    custom: "border-r-2"
+    custom: "pr-5",
   },
   {
     icon: "bi:discord",
     link: "https://discord.com/users/749560311312285696",
-    custom: "border-r-2"
+    custom: "pr-5",
   },
   {
     icon: "mdi:instagram",
     link: "https://instagram.com/hvlxh_",
-    custom: ""
-  }
+    custom: "",
+  },
 ]
 ---
 
-<div class="flex items-center justify-center h-screen">
-  <div class="bg-white rounded-lg border-2 border-gray-500 max-sm:mx-5">
-    <div class="grid grid-cols-2 max-w-md px-3 pt-3">
-      <div>
-        <h1 class="text-2xl">hvlxh</h1>
-        <p class="text-gray-500/80 w-56">Full Stack, Software Developer</p>
-      </div>
-      <div>
-        <p>Hey, I am a full-stack developer from India! I am interested in making discord bots, Also like to do in minecraft stuff</p>
-      </div>   
-    </div>
-    <div class="flex justify-between mt-4">
-      {id.map((i) => (
-        <button class={"w-full p-1 border-t-2 border-gray-500 hover:text-black hover:bg-stone-300 text-gray-900 duration-300 justify-center items-center " + i.custom}>
-          <a href={i.link} target="_blank">
-            <span class="inline-block align-middle">
-              <Icon name={i.icon} size={25} />
-            </span>
-          </a>
-        </button>
-      ))}
-    </div>
+<div
+  class="bg-white m-3 p-4 items-center rounded-lg shadow-md max-sm:text-center max-md:text-center"
+>
+  <h1 class="sm:text-3xl text-2xl font-bold">
+    Hello, I'm an Full Stack Developer!
+  </h1>
+  <p class="text-gray text-sm text-black/80 pb-3">
+    Full Stack, Software Developer
+  </p>
+
+  <p
+    class="pb-5 max-sm:text-center max-md:text-center xl:w-1/2 2xl:w-1/2 lg:w-1/2"
+  >
+    Hey there! I'm Hitesh, an 14-years old interested in Web and Software
+    development, I'm self-taught and knew <span class="text-yellow-400"
+      >Javascript</span
+    >, <span class="text-blue-700">Typescript</span>
+    and some sort of <span class="text-indigo-400">PHP</span>
+  </p>
+
+  <h1 class="text-xl font-medium pr-2 max-md:text-center max-sm:text-center">
+    Contact me:
+  </h1>
+  <div class="flex items-center max-sm:justify-center max-md:justify-center">
+    <a href="mailto:monsta22019@gmail.com">
+      <Icon name="logos:google-gmail" size={32} class="inline mr-5" />
+    </a>
+
+    <a href="https://discord.com/users/749560311312285696">
+      <Icon name="logos:discord-icon" size={32} class="inline mr-4" />
+    </a>
+
+    <a href="https://github.com/hvlxh">
+      <Icon name="mdi:github" size={32} class="inline" />
+    </a>
   </div>
 </div>
