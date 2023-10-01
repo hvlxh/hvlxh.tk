@@ -1,5 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
+import { Analytics } from "@vercel/analytics/react";
 
 interface Props {
   title: string;
@@ -31,6 +32,7 @@ const { title } = Astro.props;
         <Nav />
       </div>
       <slot />
+      <Analytics />
     </div>
   </body>
 </html>

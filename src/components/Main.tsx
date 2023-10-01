@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
-import { BiLogoGmail } from "react-icons/bi";
+import { IoMdMail } from "react-icons/io";
 import {
   VscChromeMinimize,
   VscChromeMaximize,
@@ -172,7 +172,7 @@ export default function Main() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BiLogoGmail className="mx-3" size={34} />
+            <IoMdMail className="mx-3" size={34} />
           </a>
         </ul>
       </div>
