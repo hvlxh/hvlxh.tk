@@ -1,17 +1,49 @@
 ---
-import Html from "../components/layout/Html.astro"
-import Head from "../components/layout/Head.astro"
-import Nav from "../components/Nav.astro"
-import Skills from "../components/Skills.astro"
+import Layout from "../layouts/Layout.astro";
+import WakaTime from "../components/Wakatime.astro";
+
+const Container = "div";
+const Image = "img";
+const Heading1 = "h1";
 ---
 
-<Html>
-  <Head
-    title="Hitesh V"
-    description="I'm an Full Stack Developer from India!"
-  />
-  <body>
-    <Nav />
-    <Skills />
-  </body>
-</Html>
+<Layout title="Welcome to Astro.">
+  <Container
+    style="border-width: 1px;"
+    class="bg-black m-3 p-4 items-center mt-20 border-stone-800 rounded"
+  >
+    <Heading1 class="font-black text-5xl text-center">Skills</Heading1>
+
+    <Container class="border-b-2 border-stone-700 my-5" />
+
+    <Container
+      class="grid grid-cols-1 xl:grid-cols-2 gap-4 my-5 justify-items-center"
+    >
+      <Image
+        src="https://github-readme-stats.vercel.app/api?username=hvlxh&show_icons=true&count_private=true&card_width=500px&icon_color=fb8c00&bg_color=151515&border_color=e3e1e1&text_color=8a8a8a&ring_color=fb8c00&title_color=FFF"
+        width="1000"
+        class="select-none"
+      />
+      <Image
+        src="https://github-readme-streak-stats.herokuapp.com?user=hvlxh&theme=dark&card_width=500"
+        width="1000"
+        class="select-none"
+      />
+    </Container>
+    <Image
+      src="https://skillicons.dev/icons?i=js,ts,html,css,tailwind,astro,nextjs,react,mongodb,netlify,nodejs,vscode,bash,cs"
+      class="w-full select-none"
+    />
+
+    <Container class="border-b-2 border-stone-700 my-5" />
+
+    <WakaTime
+      embeds={[
+        "https://wakatime.com/share/@hvlxh/7681b980-cbbb-4b2a-8744-1d4adc2a2e9c.svg",
+        "https://wakatime.com/share/@hvlxh/0d0fb31c-1159-4c04-99b2-7f30de764174.svg",
+        "https://wakatime.com/share/@hvlxh/437d2d45-89e2-4a47-850c-84d9399ebfb2.svg",
+        "https://wakatime.com/share/@hvlxh/296250d5-d7f0-4260-ba30-0238c747134b.svg",
+      ]}
+    />
+  </Container>
+</Layout>

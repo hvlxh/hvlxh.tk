@@ -1,50 +1,8 @@
 ---
-import Html from "../components/layout/Html.astro"
-import Head from "../components/layout/Head.astro"
-import About from "../components/About.astro"
-import Nav from "../components/Nav.astro"
-import Banner from "../components/Banner.astro"
+import Layout from "../layouts/Layout.astro";
+import Main from "../components/Main";
 ---
 
-<Html>
-  <Head
-    title="Hitesh V"
-    description="I'm an Full Stack Developer from India!"
-  />
-  <body>
-    <Nav />
-    <About />
-    <Banner />
-  </body>
-</Html>
-
-<style is:global>
-  * {
-    font-family: "Poppins", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 5px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-
-  /* For Firefox */
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
-  }
-
-</style>
+<Layout title="Welcome to Astro.">
+  <Main client:load />
+</Layout>

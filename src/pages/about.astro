@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const Container = "div";
+const Paragraph = "p";
+const Image = "img";
+---
+
+<Layout title="Welcome to Astro.">
+  <Container
+    class="bg-black border-stone-600 rounded-lg p-5 mx-5 mt-20"
+    style="border-width: 0.5px;"
+  >
+    <h1 class="text-3xl font-bold tracking-wide">
+      About <span class="text-stone-500">Me</span>
+    </h1>
+
+    <Container
+      style="border-bottom-width: 1px;"
+      class="border-stone-600 my-3"
+    />
+
+    <Container class="lg:inline-flex lg:justify-between">
+      <Container class="lg:w-1/2 border-r-0 border-stone-600 lg:border-r">
+        <Paragraph class="text-xl font-light shadow text-white/60">
+          Hello!
+        </Paragraph>
+        <br />
+        <Paragraph class="text-lg font-light shadow text-white/60 mr-5">
+          My name is Hitesh, Socially known as hvlxh. I'm 14 years old and I'm a
+          software and web developer, creating applications and websites.
+          Something interesting happened during the COVID-19 lockdown when I was
+          stuck at home with my not-so-powerful computer. I decided to learn
+          HTML, the language behind websites, just for fun. But it turned into a
+          passion, and I couldn't stop learning and building cool things on the
+          internet.
+          <Paragraph />
+          <br />
+          <Paragraph class="text-lg font-light shadow text-white/60 mr-5">
+            Besides websites, I also enjoy making APIs and other stuff. I love
+            learning and taking on new challenges in the world of coding.
+          </Paragraph>
+        </Paragraph>
+      </Container>
+      <Container
+        style="border-bottom-width: 1px;"
+        class="border-stone-600 my-3"
+      />
+      <Container class="lg:w-1/2 lg:ml-5">
+        <Container class="mb-3">
+          <Paragraph class="font-bold text-2xl py-1 text-white/90">
+            Languages And Tools:
+          </Paragraph>
+          <Image
+            class="select-none"
+            src="https://skillicons.dev/icons?i=js,ts,nodejs,php,cs,mongodb,express,git,github"
+          />
+        </Container>
+        <Container>
+          <Paragraph class="font-bold text-2xl py-1 text-white/90">
+            Softwares:
+          </Paragraph>
+          <Image
+            class="select-none"
+            src="https://skillicons.dev/icons?i=vscode,visualstudio,idea"
+          />
+        </Container>
+      </Container>
+    </Container>
+  </Container>
+</Layout>

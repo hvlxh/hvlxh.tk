@@ -1,17 +1,59 @@
 ---
-import Html from "../components/layout/Html.astro"
-import Head from "../components/layout/Head.astro"
-import Nav from "../components/Nav.astro"
-import Projects from "../components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+
+const repos = [
+  {
+    name: "hvlxh",
+    repo: "djs-template",
+  },
+  {
+    name: "LeafMCBE",
+    repo: "LeafMCBE",
+  },
+
+  {
+    name: "hvlxh",
+    repo: "node-dialogs",
+  },
+  {
+    name: "hvlxh",
+    repo: "SegaWeb",
+  },
+];
+
+const Container = "div";
+const Image = "img";
+const Link = "a";
 ---
 
-<Html>
-  <Head
-    title="Hitesh V"
-    description="I'm an Full Stack Developer from India!"
-  />
-  <body>
-    <Nav />
-    <Projects />    
-  </body>
-</Html>
+<Layout title="Welcome to Astro.">
+  <Container
+    class="bg-black border-stone-600 rounded-lg p-5 mx-5 mt-20"
+    style="border-width: 0.5px;"
+  >
+    <h1 class="text-3xl font-bold tracking-wide">Projects</h1>
+
+    <Container
+      style="border-bottom-width: 1px;"
+      class="border-stone-600 my-3"
+    />
+
+    <h1 class="mb-5">
+      I have a lot of private projects. So, i mentioned my open-sourced one
+      only.
+    </h1>
+
+    <Container class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+      {
+        repos.map(({ repo, name }) => (
+          <Link target="_blank" href={`https://github.com/${name}/${repo}`}>
+            <Image
+              src={`https://github-readme-stats.vercel.app/api/pin/?username=${name}&repo=${repo}&show_owner=true&icon_color=fb8c00&bg_color=151515&border_color=e3e1e1&text_color=8a8a8a&ring_color=fb8c00&title_color=FFF`}
+              class="w-full select-none"
+            />
+          </Link>
+        ))
+      }
+    </Container>
+  </Container>
+</Layout>

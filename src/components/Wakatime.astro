@@ -1,0 +1,15 @@
+---
+interface Props {
+    embeds: string[]
+}
+
+const { embeds } = Astro.props
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+    {embeds.map((embed: string) => (
+        <div class="bg-gray-200 p-1 rounded select-none">
+          <embed src={embed}></embed>
+        </div>
+    ))}
+</div>
